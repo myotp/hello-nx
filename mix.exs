@@ -21,7 +21,8 @@ defmodule HelloNx.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:nx, "~> 0.6.4"}
+      {:nx, "~> 0.6.4"},
+      {:exla, "~> 0.6.4"}
     ]
   end
 end

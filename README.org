@@ -24,3 +24,6 @@ Nx.tensor([[1, 2, 3], [4, 5, 6]]) |> Nx.mean(axes: [1])
 Nx.tensor([[[1, 2, 3], [4, 5, 6]]]) |> Nx.mean(axes: [0, 1])
 Nx.add(Nx.tensor([1, 2, 3]), Nx.tensor([4, 5, 6]))
 Nx.add(Nx.tensor(1), Nx.tensor([1, 2, 3]))
+
+* EXLA
+Application.get_all_env(:nx)
