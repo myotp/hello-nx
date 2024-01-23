@@ -1,0 +1,26 @@
+* Nx
+Nx.tensor([[1, 2, 3], [4, 5, 6]])
+Nx.tensor([[1, 2, 3], [4, 5, 6.88]])
+Nx.tensor(8888)
+Nx.tensor([1,2])
+Nx.tensor([[1,2],[3,4]])
+Nx.tensor([[1,2],[3,4],[5,6]])
+
+1..9 |> Enum.chunk_every(3) |> Nx.tensor()
+1..16 |> Enum.chunk_every(4) |> Nx.tensor()
+1..16 |> Enum.chunk_every(4) |> Enum.map(&(Enum.chunk_every(&1, 2))) |> Nx.tensor()
+Nx.tensor([[ [1, 2] ],[ [1, 2] ],[ [3, 4] ]])
+Nx.tensor([[1,2],[3,4],[5,6]]) |> Nx.shape()
+Nx.tensor([[1,2],[3,4],[5,6]]) |> Nx.type()
+Nx.shape(Nx.tensor(8))
+Nx.to_binary(Nx.tensor(1))
+Nx.tensor(Enum.to_list(1..9)) |> Nx.reshape({3,3})
+
+# Operations
+Nx.tensor([[1,2],[3,4],[5,6]]) |> Nx.sum()
+Nx.tensor([[1,2],[3,4],[5,6]]) |> Nx.add(10)
+Nx.tensor([[1, 2, 3], [4, 5, 6]]) |> Nx.mean()
+Nx.tensor([[1, 2, 3], [4, 5, 6]]) |> Nx.mean(axes: [1])
+Nx.tensor([[[1, 2, 3], [4, 5, 6]]]) |> Nx.mean(axes: [0, 1])
+Nx.add(Nx.tensor([1, 2, 3]), Nx.tensor([4, 5, 6]))
+Nx.add(Nx.tensor(1), Nx.tensor([1, 2, 3]))
