@@ -27,3 +27,11 @@ Nx.add(Nx.tensor(1), Nx.tensor([1, 2, 3]))
 
 * EXLA
 Application.get_all_env(:nx)
+# defn
+LinearRegression.add_two(1, 9)
+t1 = Nx.tensor([[1,2], [3,4]])
+t2 = Nx.tensor([[4,3], [2,1]])
+LinearRegression.add_two(t1, t2)
+LinearRegression.add_two(Nx.tensor([[1,2], [3,4]]), Nx.tensor([[4,3], [2,1]]))
+
+LinearRegression.demo()
